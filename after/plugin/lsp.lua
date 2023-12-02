@@ -27,7 +27,7 @@ cmp.setup({
 	},
 	formatting = lsp_zero.cmp_format(),
     mapping = cmp.mapping.preset.insert({
-        ['<CR>'] = cmp.mapping.confirm({select = false}),
+        ['<CR>'] = cmp.mapping.confirm({select = true}),
     })
 })
 
