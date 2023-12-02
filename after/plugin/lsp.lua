@@ -1,6 +1,6 @@
 local lsp_zero = require('lsp-zero')
 
-lsp_zero.on_attach(function(client, bufnr)
+lsp_zero.on_attach(function(_, bufnr)
   -- see :help lsp-zero-keybindings
   -- to learn the available actions
   lsp_zero.default_keymaps({buffer = bufnr})
@@ -25,6 +25,9 @@ cmp.setup({
 		{name = 'nvim_lsp'},
 		{name = 'nvim_lua'},
 	},
-	formatting = lsp_zero.cmp_format()
+	formatting = lsp_zero.cmp_format(),
+    mapping = cmp.mapping.preset.insert({
+        ['<CR>'] = cmp.mapping.confirm({select = false}),
+    })
 })
 
