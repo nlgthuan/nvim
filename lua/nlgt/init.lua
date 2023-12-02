@@ -1,3 +1,3 @@
 require("nlgt.remap")
 require("nlgt.packer")
-print("hello from nlgt")
+require("nlgt.set")
