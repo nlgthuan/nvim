@@ -25,7 +25,7 @@ return require('packer').startup(function(use)
 	  end
   }
 
-  use "nvim-lua/plenary.nvim" -- don't forget to add this one if you don't have it yet!
+  use "nvim-lua/plenary.nvim"
   use {
 	  "ThePrimeagen/harpoon",
 	  branch = "harpoon2",
@@ -38,7 +38,6 @@ return require('packer').startup(function(use)
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v3.x',
 	  requires = {
-		  --- Uncomment these if you want to manage LSP servers from neovim
 		  {'williamboman/mason.nvim'},
 		  {'williamboman/mason-lspconfig.nvim'},
 
@@ -64,4 +63,6 @@ return require('packer').startup(function(use)
   })
 
   use "github/copilot.vim"
+
+  use "lewis6991/gitsigns.nvim"
 end)
