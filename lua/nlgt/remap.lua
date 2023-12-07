@@ -26,15 +26,12 @@ vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
--- find and replace all
-vim.keymap.set("n", "<leader>S", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
 -- save file
-vim.keymap.set("n", "<C-s>", "<cmd>w<CR>")
+vim.keymap.set("n", "<leader>S", "<cmd>w<CR>")
 vim.keymap.set("n", "<leader>fs", "<cmd>Neoformat<CR><cmd>w<CR>")
 vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
 

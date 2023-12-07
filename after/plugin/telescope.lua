@@ -16,3 +16,9 @@ vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iag
 
 vim.keymap.set('n', '<leader>sb', builtin.buffers, {desc = '[S]earch [B]uffers'})
 vim.keymap.set('n', '<leader>of', builtin.oldfiles, {desc = 'Search [O]ld [F]iles'})
+
+vim.keymap.set('n', '<leader>gs', builtin.git_status, {desc = '[G]it [S]tatus'})
+vim.keymap.set('n', '<leader>gc', builtin.git_commits, {desc = '[G]it [C]ommits'})
+vim.keymap.set('n', '<leader>gb', builtin.git_branches, {desc = '[G]it [B]ranches'})
+
+vim.keymap.set('n', '<leader>tb', builtin.builtin, {desc = '[T]elescope [B]uiltins'})
