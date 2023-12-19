@@ -69,4 +69,6 @@ return require('packer').startup(function(use)
   use "tpope/vim-commentary"
 
   use "j-hui/fidget.nvim"
+
+  use "lukas-reineke/indent-blankline.nvim"
 end)
