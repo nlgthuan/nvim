@@ -71,4 +71,6 @@ return require('packer').startup(function(use)
   use "j-hui/fidget.nvim"
 
   use "lukas-reineke/indent-blankline.nvim"
+
+  use "nvim-lualine/lualine.nvim"
 end)
