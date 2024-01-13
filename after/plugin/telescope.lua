@@ -22,3 +22,4 @@ vim.keymap.set('n', '<leader>gc', builtin.git_commits, {desc = '[G]it [C]ommits'
 vim.keymap.set('n', '<leader>gb', builtin.git_branches, {desc = '[G]it [B]ranches'})
 
 vim.keymap.set('n', '<leader>tb', builtin.builtin, {desc = '[T]elescope [B]uiltins'})
+vim.keymap.set('n', '<leader>tr', builtin.resume, {desc = '[T]elescope [R]esume'})

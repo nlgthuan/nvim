@@ -35,8 +35,5 @@ vim.keymap.set("n", "<leader>S", "<cmd>w<CR>")
 vim.keymap.set("n", "<leader>fs", "<cmd>Neoformat<CR><cmd>w<CR>")
 vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
 
--- window management
-vim.keymap.set("n", "<leader>w", "<C-w>")
-
 -- search currnet hightlighted word
 vim.keymap.set("v", "<leader>s", [[y/<C-R>0<CR>]])
