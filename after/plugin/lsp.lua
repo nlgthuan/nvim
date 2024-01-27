@@ -21,9 +21,10 @@ lsp_zero.on_attach(function(_, bufnr)
   vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
 end)
 
+vim.filetype.add({ extension = { templ = "templ" } })
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'tsserver', 'lua_ls', 'eslint'},
+  ensure_installed = {'tsserver', 'lua_ls', 'eslint', 'gopls', 'templ', 'tailwindcss'},
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()
@@ -67,6 +68,12 @@ require('mason-lspconfig').setup({
             },
         })
     end,
+    tailwindcss = function ()
+      require('lspconfig').tailwindcss.setup({
+        filetypes = { "templ", "javascript", "typescript", "react" },
+        init_options = { userLanguages = { templ = "html" } },
+      })
+    end
   },
 })
 
