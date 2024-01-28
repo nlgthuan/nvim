@@ -28,3 +28,6 @@ vim.opt.updatetime = 50
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+vim.g.ftplugin_sql_omni_key = nil
+vim.g.omni_sql_no_default_maps = 1

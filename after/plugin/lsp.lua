@@ -24,7 +24,7 @@ end)
 vim.filetype.add({ extension = { templ = "templ" } })
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'tsserver', 'lua_ls', 'eslint', 'gopls', 'templ', 'tailwindcss'},
+  ensure_installed = {'tsserver', 'lua_ls', 'eslint', 'gopls', 'templ', 'tailwindcss', 'html'},
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()
