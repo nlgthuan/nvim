@@ -14,10 +14,10 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 vim.keymap.set("n", "Q", "<nop>")
 
@@ -27,12 +27,12 @@ vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
+	vim.cmd("so")
 end)
 
 -- save file
-vim.keymap.set("n", "<leader>S", "<cmd>w<CR>")
-vim.keymap.set("n", "<leader>fs", "<cmd>Neoformat<CR><cmd>w<CR>")
+vim.keymap.set("n", "<leader>s", "<cmd>w<CR>")
+vim.keymap.set("n", "<leader>f", "<cmd>FormatWrite<CR><cmd>w<CR>")
 vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
 
 -- search currnet hightlighted word

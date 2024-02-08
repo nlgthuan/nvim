@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
 	"catppuccin/nvim",
   	as = "catppuccin",
   }
+
   use {
 	  'nvim-treesitter/nvim-treesitter',
 	  run = function()
@@ -50,8 +51,6 @@ return require('packer').startup(function(use)
 	  }
   }
 
-  use "sbdchd/neoformat"
-
   use({
       "kylechui/nvim-surround",
       tag = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -73,4 +72,6 @@ return require('packer').startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
 
   use "nvim-lualine/lualine.nvim"
+
+  use "mhartington/formatter.nvim"
 end)
