@@ -61,7 +61,7 @@ require("formatter").setup({
             require("formatter.filetypes.html").prettier,
         },
         templ = {
-            require("formatter.filetypes.html").prettier,
+            require("formatter.filetypes.templ").templfmt,
         },
         sql = {
             require("formatter.filetypes.sql").sqlfluff,
