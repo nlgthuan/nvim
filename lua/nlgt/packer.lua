@@ -56,9 +56,7 @@ return require("packer").startup(function(use)
 		"kylechui/nvim-surround",
 		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
 		config = function()
-			require("nvim-surround").setup({
-				-- Configuration here, or leave empty to use defaults
-			})
+			require("nvim-surround").setup({})
 		end,
 	})
 
@@ -77,4 +75,12 @@ return require("packer").startup(function(use)
 	use("nlgtEA/formatter.nvim")
 
 	use("stevearc/oil.nvim")
+
+	use({
+		"NeogitOrg/neogit",
+		requries = {
+			"nvim-lua/plenary.nvim",
+			"sindrets/diffview.nvim",
+		},
+	})
 end)
