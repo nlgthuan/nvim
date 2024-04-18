@@ -83,4 +83,6 @@ return require("packer").startup(function(use)
 			"sindrets/diffview.nvim",
 		},
 	})
+
+    use "sindrets/diffview.nvim"
 end)
