@@ -76,13 +76,5 @@ return require("packer").startup(function(use)
 
 	use("stevearc/oil.nvim")
 
-	use({
-		"NeogitOrg/neogit",
-		requries = {
-			"nvim-lua/plenary.nvim",
-			"sindrets/diffview.nvim",
-		},
-	})
-
-    use "sindrets/diffview.nvim"
+	use("sindrets/diffview.nvim")
 end)
