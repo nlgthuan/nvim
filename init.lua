@@ -57,9 +57,6 @@ vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
 
--- Format
-vim.keymap.set('n', '<leader>f', function() vim.lsp.buf.format() end)
-
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = 'Telescope find files' })
 vim.keymap.set('n', '<leader>sc', function()
