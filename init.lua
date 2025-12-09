@@ -6,7 +6,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.wrap = false
-vim.opt.scrolloff = 20
+vim.opt.scrolloff = 10
 vim.opt.colorcolumn = "80"
 vim.opt.signcolumn = "yes"
 
@@ -62,6 +62,10 @@ vim.keymap.set('n', '<leader>f', function() vim.lsp.buf.format() end)
 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>sc', function()
+  builtin.find_files {
+    cwd = vim.fn.stdpath("config") }
+end, { desc = 'Telescope find config' })
 vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Telescope help tags' })
