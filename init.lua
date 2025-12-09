@@ -42,7 +42,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 require("config.lazy")
 
 -- [[ LSP ]]
-vim.lsp.enable({ "lua_ls", "ts_ls" })
+vim.lsp.enable({ "lua_ls", "ts_ls", "pyright" })
 
 
 -- [[ Key map ]]
