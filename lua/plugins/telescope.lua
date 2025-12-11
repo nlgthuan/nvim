@@ -11,5 +11,14 @@ return {
       },
     }
     require("config.telescope.multigrep").setup()
+
+    local builtin = require('telescope.builtin')
+    vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = 'Telescope find files' })
+    vim.keymap.set('n', '<leader>sc', function()
+      builtin.find_files { cwd = vim.fn.stdpath("config") }
+    end, { desc = 'Telescope find config' })
+    vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = 'Telescope buffers' })
+    vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Telescope help tags' })
+    vim.keymap.set("n", "gd", builtin.lsp_references)
   end
 }

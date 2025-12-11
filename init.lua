@@ -30,16 +30,6 @@ vim.opt.timeoutlen = 300
 -- [[ Diagnostic ]]
 vim.diagnostic.config({ virtual_text = true })
 
-vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking',
-  group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-})
-
-
-require("config.lazy")
 
 -- [[ LSP ]]
 vim.lsp.enable({ "lua_ls", "ts_ls", "pyright" })
@@ -56,20 +46,10 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
-
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>sc', function()
-  builtin.find_files {
-    cwd = vim.fn.stdpath("config") }
-end, { desc = 'Telescope find config' })
-vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Telescope help tags' })
-
+-- Diagnostic keymaps
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 -- LSP
-vim.keymap.set("n", "gd", builtin.lsp_definitions)
-vim.keymap.set("n", "gd", builtin.lsp_references)
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 
 
@@ -77,5 +57,13 @@ vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
--- Diagnostic keymaps
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  desc = 'Highlight when yanking',
+  group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
+
+
+require("config.lazy")
