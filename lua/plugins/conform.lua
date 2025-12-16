@@ -5,7 +5,8 @@ return { -- Autoformat
     {
       '<leader>f',
       function()
-        require('conform').format { async = true, lsp_format = 'fallback' }
+        require('conform').format({ lsp_format = 'fallback' })
+        vim.cmd('write')
       end,
       mode = '',
       desc = '[F]ormat buffer',

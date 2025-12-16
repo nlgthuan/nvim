@@ -32,7 +32,7 @@ vim.diagnostic.config({ virtual_text = true })
 
 
 -- [[ LSP ]]
-vim.lsp.enable({ "lua_ls", "ts_ls", "pyright" })
+vim.lsp.enable({ "lua_ls", "ts_ls", "pyright", "gopls" })
 
 
 -- [[ Key map ]]
@@ -48,6 +48,7 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>gl', vim.diagnostic.open_float, { desc = 'Open diagnostic float' })
 
 -- LSP
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
