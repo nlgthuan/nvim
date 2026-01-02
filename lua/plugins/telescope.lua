@@ -19,6 +19,8 @@ return {
     end, { desc = 'Telescope find config' })
     vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = 'Telescope buffers' })
     vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Telescope help tags' })
-    vim.keymap.set("n", "gd", builtin.lsp_references)
+    vim.keymap.set("n", "<leader>gr", builtin.lsp_references)
+    vim.keymap.set("n", "gd", builtin.lsp_definitions)
+    vim.keymap.set("n", "gI", builtin.lsp_implementations)
   end
 }

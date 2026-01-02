@@ -1,6 +1,9 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- This was set to <C-C> by default, which is super annoying!
+vim.g.ftplugin_sql_omni_key = '<C-L>'
+
 -- Basic settings
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -52,6 +55,7 @@ vim.keymap.set('n', '<leader>gl', vim.diagnostic.open_float, { desc = 'Open diag
 
 -- LSP
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
 
 
 -- Clear highlights on search when pressing <Esc> in normal mode
