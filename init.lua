@@ -35,7 +35,7 @@ vim.diagnostic.config({ virtual_text = true })
 
 
 -- [[ LSP ]]
-vim.lsp.enable({ "lua_ls", "ts_ls", "pyright", "gopls", "postgres_lsp" })
+vim.lsp.enable({ "lua_ls", "ts_ls", "pyright", "gopls", "postgres_lsp", "texlab" })
 
 
 -- [[ Key map ]]
