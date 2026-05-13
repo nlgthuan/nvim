@@ -34,8 +34,24 @@ vim.opt.timeoutlen = 300
 vim.diagnostic.config({ virtual_text = true })
 
 
+local langs = {
+  "c",
+  "lua",
+  "vim",
+  "vimdoc",
+  "query",
+  "markdown",
+  "markdown_inline",
+  "python",
+  "go",
+  "latex",
+  "java",
+  "haskell",
+  "typescript",
+  "javascript",
+}
 -- [[ LSP ]]
-vim.lsp.enable({ "lua_ls", "ts_ls", "pyright", "gopls", "postgres_lsp", "texlab" })
+vim.lsp.enable({ "lua_ls", "ts_ls", "pyright", "gopls", "postgres_lsp", "texlab", "jdtls", "hls" })
 
 
 -- [[ Key map ]]
@@ -70,5 +86,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = langs,
+  callback = function() vim.treesitter.start() end,
+})
 
 require("config.lazy")
